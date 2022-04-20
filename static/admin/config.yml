@@ -10,6 +10,9 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - name: "contentKey"
+        widget: "hidden"
+        default: "blog"
       - label: "Tilte"
         name: "title"
         widget: "string"
@@ -19,3 +22,19 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
+  - name: "pages"
+    label: "pages"
+    files:
+      - file: "src/pageData/index.md"
+        label: "Index Page"
+        name: "index-page"
+        fields:
+          - name: "contentKey"
+            widhet: "hidden"
+            default: "indexPage"
+          - label: "TagLine"
+            name: "taheline"
+            widget: "string"
+          - label: "Hero Image"
+            name: "heroImage"
+            widget: "Image"

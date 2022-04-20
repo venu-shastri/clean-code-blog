@@ -6,7 +6,9 @@ export default function BlogList(){
 
     const data=useStaticQuery(graphql`
     query{
-        allMarkdownRemark{
+        allMarkdownRemark(sort: {fields:[frontmatter___date],order:DESC}
+                          filter:{frontmatter: {contentKey: {eq: "blog"}}}
+        ){
             edges{
                 node{
                     id
