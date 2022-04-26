@@ -13,4 +13,8 @@ categories:
         description: Single Instance , MonoType Pattern
       - name: Bridge
         description: Prefer Composition over inheritance
+  - name: Concepts
+    items:
+      - name: Encapsulation
+        description: Define Role and Responsibilities
 ---
